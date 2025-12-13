@@ -71,3 +71,16 @@ def ordenar_estudiantes_por_promedio(lista_estudiantes):
     print("Estudiantes ordenados por promedio (de mayor a menor):")
     for estudiante in lista_ordenada:
         print(f"{estudiante['nombre']} {estudiante['apellido']} - Promedio: {estudiante['promedio']}")
+
+
+#Try y except
+# Función para agregar un estudiante
+def agregar_estudiante(lista_estudiantes):
+    nombre = input("Ingrese el nombre del estudiante: ")
+    apellido = input("Ingrese el apellido del estudiante: ")
+
+    try:
+        promedio = float(input("Ingrese el promedio del estudiante: "))
+    except ValueError:
+        print("Error: El promedio debe ser un valor numerico.")
+        return
